@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        {% for i in language_selection_result %}  
+            <p>{{i.movie_name}}</p>
+        {% endfor%}      
+{% endblock %}
+
+<!-- {% else%}
+    <h2 style="text-align:center;">No Results Found</h2>
+    <div class="col-lg-12">       
+        
+    </div>  -->

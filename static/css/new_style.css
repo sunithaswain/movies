@@ -1,0 +1,101 @@
+<style>
+.inputWrapper {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    /*Using a background color, but you can use a background image to represent a button*/
+	border:1px solid #c5c5c5;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	background: #fefefe; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fefefe 1%, #f5f5f5 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#fefefe), color-stop(99%,#f5f5f5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefefe 1%,#f5f5f5 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefefe 1%,#f5f5f5 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefefe 1%,#f5f5f5 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefefe 1%,#f5f5f5 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
+	color: #4d4843;
+	font-size:14px;
+	font-family:'latolight';
+	margin-bottom: 20px;
+	padding:0px 10px;
+	line-height:33px;
+	color:#626262;
+	text-align:center;
+	width:119px!important;
+	height:33px!important;
+	float:left;
+}
+
+.fileInput {
+    cursor: pointer;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    right: 0;
+    /*This makes the button huge so that it can be clicked on*/
+    font-size:50px;
+}
+.like-it{
+    overflow: inherit!important;
+}
+.like-it ul{
+    padding: 10px 0px;
+box-shadow: 2px -1px 52px -9px #CC0000;
+-webkit-box-shadow: 2px -1px 52px -9px #CC0000;
+-moz-box-shadow: 2px -1px 52px -9px #CC0000;
+-o-box-shadow: 2px -1px 52px -9px #CC0000;
+}
+.like-it ul li{
+    margin: 0px 20px;
+}
+.like-it ul li ul{
+    border: none!important;
+    box-shadow: none!important;
+}
+.spcial-text{
+    margin-top: 40px;
+}
+.grammar-scale{
+    background: #fff;
+    border: 1px solid #565656;
+    border-radius: 10px;
+    font-family: "latolight";
+    font-size: 14px;
+    height: 245px;
+    margin-top: 70px;
+    overflow: hidden;
+    padding: 10px;
+    width: 100%;
+    resize: none;
+}
+.coupon-code{
+    width: 70%;
+    margin: 48px auto;
+}
+.coupon-code input[type=text]{
+    width: 100%;
+    height: 32px;
+    padding: 0px 10px;
+}
+.apply-btn{
+    background: none repeat scroll 0 0 #0067cc;
+    border-color: -moz-use-text-color -moz-use-text-color #109b02;
+    border-radius: 5px;
+    border-style: none none solid;
+    border-width: medium medium 0;
+    color: #fff;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 0;
+    text-align: center;
+    width: 65px;
+}
+.order-input{
+    margin-top: 40px!important;
+}
+</style>
+    

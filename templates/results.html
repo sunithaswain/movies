@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="row">
+    {%if results %}<h2 style="text-align:center;">Total Results</h2>
+    <div class="col-lg-12">
+        {%for i in results%}            
+            <div class="col-lg-4">Movie Name  : <b>{{i.movie_name}}</b></div>
+            <div class="col-lg-6">Released Year( <b>{{i.releaseyear}} </b>)</div>
+            <div class="col-lg-2">--(<b>{{i.language}} </b>)</div>    
+            
+        {%endfor%}
+        
+    </div>    
+    {%endif%}   
+    {%if years_result%}<h2 style="text-align:center;">Yearly wise Results</h2>
+    <div class="col-lg-12">
+        {%for i in years_result%}            
+            <div class="col-lg-4">Movie Name  : <b>{{i.movie_name}}</b></div>
+            <div class="col-lg-6">Released Year( <b>{{i.releaseyear}} </b>)</div> 
+            <div class="col-lg-2">--(<b>{{i.language}} </b>)</div>   
+            
+        {%endfor%}
+        
+    </div>
+    {%endif%}
+
+    {%if languages_result%}<h2 style="text-align:center;">Languages wise Results</h2>
+    <div class="col-lg-12">
+        {%for i in languages_result%}            
+            <div class="col-lg-4">Movie Name  : <b>{{i.movie_name}}</b></div>
+            <div class="col-lg-6">Released Year( <b>{{i.releaseyear}} </b>)</div> 
+            <div class="col-lg-2">--(<b>{{i.language}} </b>)</div>  
+            
+        {%endfor%}
+        
+    </div>
+    {%endif%}
+
+    {%if titles_result%}<h2 style="text-align:center;">Movie Titles wise Results</h2>
+    <div class="col-lg-12">
+        {%for i in titles_result%}            
+            <div class="col-lg-4">Movie Name  : <b>{{i.movie_name}}</b></div>
+            <div class="col-lg-6">Released Year( <b>{{i.releaseyear}} </b>)</div>
+            <div class="col-lg-2">--(<b>{{i.language}} </b>)</div>    
+            
+        {%endfor%}
+        
+    </div>
+    
+    {%endif%}
+    
+    
+</div>
+
+  
+
+
+
+<script type="text/javascript">
+function myFunction () {
+  
+  var select_value = document.getElementById("languages_id").value;
+  //alert(event.target.id);
+  console.log(select_value);   
+
+
+
+    if (select_value!="language")
+        {
+        $.ajax({
+                type:"GET",
+                url:"/languages/",
+                data:{"lan":select_value},
+                success:function(data)
+                {
+                    console.log("success");
+                }
+            });
+
+        }
+    else
+    {
+        alert("not updated");   
+    }
+
+ 
+
+}
+
+</script>
+
+{% endblock %}
