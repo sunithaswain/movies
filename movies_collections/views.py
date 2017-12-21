@@ -36,7 +36,7 @@ def language_filter(request):
         print "else"
         pass
 
-   
+    
 
 def year_filter(request):
     """ to filter as per language basis """
@@ -91,6 +91,7 @@ def search_filter(request):
         form = SearchingForm(request.GET)
         searching_word = request.GET.get('search_text')
         year_data = Movies.objects.filter(releaseyear__icontains=searching_word)
+        print ">>>>>>>>",year_data
         language_data = Movies.objects.filter(language__icontains=searching_word)
         movies_data = Movies.objects.filter(movie_name__icontains=searching_word)
 
@@ -98,3 +99,24 @@ def search_filter(request):
     else:
         results = Movies.objects.all()        
     return render(request,'results.html',{'years_result':year_data,'languages_result':language_data,'titles_result':movies_data, 'results':results})
+def gettingids(request):
+    year_data=language_data=movies_data =""
+    if request.method=="GET":
+
+        language_value = request.GET.get('languages')
+        year_value = request.GET.get('year')
+        print language_value,year_value
+
+        filter_data = Movies.objects.filter(releaseyear__icontains=year_value,language__icontains=language_value)
+        print "--------------------------",filter_data
+        print 
+        pass
+
+        return render(request,'results1.html',{'filter_data':filter_data,'years_result':year_data,'languages_result':language_data,'titles_result':movies_data, 'results':results})
+    else:
+        pass
+
+
+
+
+

@@ -50,6 +50,19 @@
     </div>
     
     {%endif%}
+    {%if filter_data%}<h2 style="text-align:center;">Language and Year wise Results</h2>
+    <div class="col-lg-12">
+        {%for i in filter_data%}            
+            <div class="col-lg-4">Movie Name  : <b>{{i.movie_name}}</b></div>
+            <div class="col-lg-6">Released Year( <b>{{i.releaseyear}} </b>)</div>
+            <div class="col-lg-2">--(<b>{{i.language}} </b>)</div>    
+            
+        {%endfor%}
+        
+    </div>
+    
+    {%endif%}
+    
     
     
 </div>

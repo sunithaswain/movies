@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^languages/', views.language_filter, name='lan'),
     url(r'^year/', views.year_filter, name='byyear'),
     url(r'^search/', views.search_filter, name='searching'),
-
+    url(r'^ajaxcal/', views.gettingids, name='azxcalling'),
     ] 
